@@ -1,0 +1,127 @@
+{
+  "project_info": {
+    "project_number": "737028635491",
+    "firebase_url": "https://teamlab-demo-default-rtdb.firebaseio.com",
+    "project_id": "teamlab-demo",
+    "storage_bucket": "teamlab-demo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737028635491:android:5a796bf76347ee079df156",
+        "android_client_info": {
+          "package_name": "com.example.firstkotlinapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtHPwNHN90JO7j-Yq0lsi13eVaMKi6xE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737028635491:android:d3586916e5e6bc0b9df156",
+        "android_client_info": {
+          "package_name": "com.example.notesApp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtHPwNHN90JO7j-Yq0lsi13eVaMKi6xE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737028635491:android:111272bca1f6c2bd9df156",
+        "android_client_info": {
+          "package_name": "com.example.notesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtHPwNHN90JO7j-Yq0lsi13eVaMKi6xE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737028635491:android:0c6ce3c301487a629df156",
+        "android_client_info": {
+          "package_name": "com.example.teamlabdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtHPwNHN90JO7j-Yq0lsi13eVaMKi6xE0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737028635491-2hmfktai3qnbvfpkltrbgsaubj5vp7js.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
