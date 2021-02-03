@@ -8,6 +8,7 @@ import com.example.notesapp.R
 import com.example.notesapp.models.Note
 import kotlinx.android.synthetic.main.note_item.view.*
 
+//added comment for commit test
 
 class RecyclerAdapter() :
     RecyclerView.Adapter<RecyclerAdapter.NotesViewHolder>() {
