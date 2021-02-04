@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.note_item.view.*
 import com.firebase.ui.database.FirebaseRecyclerAdapter
 import com.firebase.ui.database.FirebaseRecyclerOptions
 
-//added comment for commit test
+//Trying to implement a recyclerview into this app
 
 class RecyclerAdapter(val context: Context, list: ArrayList<Note>): RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
 
