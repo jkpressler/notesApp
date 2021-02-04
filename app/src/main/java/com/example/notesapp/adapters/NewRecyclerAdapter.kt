@@ -18,7 +18,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions
 
 //added comment for commit test
 
-class RecyclerAdapter(val context: Context, list: ArrayList<Note>): RecyclerView.Adapter<RecyclerAdapter.RecyclerViewHolder>() {
+class NewRecyclerAdapter(val context: Context, list: ArrayList<Note>, ){
 
     private var listener: OnItemClickListener? = null
     private var arrList = ArrayList<Note>()
@@ -29,32 +29,36 @@ class RecyclerAdapter(val context: Context, list: ArrayList<Note>): RecyclerView
         val tvView3: TextView = itemView.tvDateTime
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
+    fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         return RecyclerViewHolder(
             LayoutInflater.from(parent.context).inflate(R.layout.note_item,parent, false)
         )
     }
 
-    override fun getItemCount() = arrList.size
+    fun getItemCount() = arrList.size
 
     fun setData(arrNotesEntList: List<Note>){
         //list = arrNotesEntList as ArrayList<Note>
     }
 
-    override fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
+    fun onBindViewHolder(holder: RecyclerViewHolder, position: Int) {
 
         holder.tvView1.text = arrList[position].title
         holder.tvView2.text = arrList[position].body
         holder.tvView3.text = arrList[position].dateTime
 
         //holder.itemView.cardView.setOnClickListener {
-            //listener!!.onClicked(arrList[position].id)            //changed noteID parameter of onClicked function to a string... in case things crash
+        //listener!!.onClicked(arrList[position].id)            //changed noteID parameter of onClicked function to a string... in case things crash
         //}
 
     }
 
     interface OnItemClickListener{
         fun onClicked(noteId: String)
+    }
+
+    fun onBindViewHolder(holder: RecyclerViewHolder, position: Int, model: Note) {
+        TODO("Not yet implemented")
     }
 
 

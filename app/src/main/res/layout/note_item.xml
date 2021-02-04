@@ -34,6 +34,20 @@
             android:textColor="@color/white"/>
 
         <TextView
+            android:id="@+id/tvDateTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_9ssp"
+            android:text="datetime"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingTop="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/white"/>
+
+        <TextView
             android:id="@+id/tvBody"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,19 +61,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:textColor="@color/white"/>
 
-        <TextView
-            android:id="@+id/tvDateTime"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/_9ssp"
-            android:text="datetime"
-            android:paddingStart="@dimen/_10sdp"
-            android:paddingTop="@dimen/_2sdp"
-            android:paddingBottom="@dimen/_5sdp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:textColor="@color/white"/>
+
     </LinearLayout>
     </androidx.cardview.widget.CardView>
 

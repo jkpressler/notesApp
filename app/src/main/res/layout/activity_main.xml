@@ -10,7 +10,7 @@
         android:id="@+id/notesList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#FFDB6F"
+        android:background="#B8E0FF"
         android:divider="@color/white"
         android:dividerHeight="2dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,7 +27,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:text="New Note"
         android:textColor="@color/white"/>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,18 +8,47 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.notesapp.models.Note
 import com.example.notesapp.models.NoteModel
 import com.google.android.gms.tasks.OnCompleteListener
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import kotlinx.android.synthetic.main.add_note_layout.*
 
 class AddNoteActivity: AppCompatActivity() {
+
+    private val db: DatabaseReference = FirebaseDatabase.getInstance().reference.child("notes")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_note_layout)
 
         NoteModel
-
+        //val data = NoteModel.getData()
+        //if (data != null){
+        //    retrieveData()
+        //}
+        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         addNote.setOnClickListener{saveNote()}
     }
+
+    //private fun retrieveData(){
+        //val noteListener = object : ValueEventListener{
+           // override fun onDataChange(snapshot: DataSnapshot) {
+               // val aNote = snapshot.getValue<Note>()
+               // if (aNote != null) {
+                   // add_note_title.setText(aNote.title)
+                   // add_note_body.setText(aNote.body)
+                   // add_note_datetime.setText(aNote.dateTime)
+                //}
+
+           // }
+
+            //override fun onCancelled(error: DatabaseError) {
+
+            //}
+        //}
+        //db.addValueEventListener(noteListener)
+
+    //}
+
 
     private fun saveNote(){
         if (add_note_title.text == null || add_note_title.text.length <= 0){

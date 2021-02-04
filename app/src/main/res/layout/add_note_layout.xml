@@ -9,35 +9,44 @@
         android:id="@+id/add_note_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_15ssp"
+        android:textSize="@dimen/_25ssp"
         android:hint="Title"
-        android:background="#FFDB6F"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="#66A869"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
-        android:id="@+id/add_note_body"
+        android:id="@+id/add_note_datetime"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_15ssp"
-        android:hint="Body"
-        android:background="#FFDB6F"
+        android:textSize="@dimen/_18ssp"
+        android:background="#70AE73"
+        android:textColor="@color/white"
+        android:inputType="date|datetime"
+        android:hint="DateTime"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/add_note_title"/>
 
     <EditText
-        android:id="@+id/add_note_datetime"
+        android:id="@+id/add_note_body"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/_15ssp"
-        android:background="#FFDB6F"
-        android:inputType="date|datetime"
-        android:hint="DateTime"
+        android:textSize="@dimen/_18ssp"
+        android:hint="Body"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_marginEnd="@dimen/_4sdp"
+        android:background="#77AE7A"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_note_body"/>
+        app:layout_constraintTop_toBottomOf="@id/add_note_datetime"/>
 
     <Button
         android:id="@+id/addNote"

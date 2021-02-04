@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
+import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notesapp.adapters.NoteAdapter
 import com.example.notesapp.models.Note
@@ -18,18 +19,27 @@ class MainActivity : AppCompatActivity(), Observer {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_main)                  //set layout as activity_main
         NoteModel
 
 
         val dataList: ListView = findViewById(R.id.notesList)
-        val data: ArrayList<Note> = ArrayList()
-        mNoteListAdapter = NoteAdapter(this, R.layout.note_item, data)
-        dataList.adapter = mNoteListAdapter
+        val data: ArrayList<Note> = ArrayList()                                 //arraylist of notes
+        mNoteListAdapter = NoteAdapter(this, R.layout.note_item, data)  //pass in this context, note_item layout, and the arraylist of notes
+        dataList.adapter = mNoteListAdapter                                     //add note_items to the listview
 
+        dataList.setOnItemClickListener { parent, view, position, id ->         //listen for a click on a note_item
+            if(position==0){
+                Toast.makeText(this, "First Note Clicked", Toast.LENGTH_LONG).show()
+            }
+
+            val element = parent.getItemAtPosition(position) // The item that was clicked
+            val intent = Intent(this, AddNoteActivity::class.java)
+            startActivity(intent)
+        }
 
         makeNote.setOnClickListener{
-            addNote()
+            addNote()                                                           //go to add a note page when "New Note" button is clicked
         }
     }
 
