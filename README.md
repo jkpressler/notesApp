@@ -5,8 +5,8 @@ First Kotlin App. A notes app with firebase realtime database.
 
 これから足したい機能：
 
->>recylcerview
-    >>staggeredlayout 
->>fragments
->>ノートの色を変えるようにする
->>ノートをアップデート・削除出来るようにする
+1 recylcerview
+    -staggeredlayout 
+2 fragments
+3 ノートの色を変えるようにする
+4 ノートをアップデート・削除出来るようにする
