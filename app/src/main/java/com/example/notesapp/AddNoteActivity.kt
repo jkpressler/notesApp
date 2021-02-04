@@ -2,6 +2,7 @@ package com.example.notesapp
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -19,35 +20,11 @@ class AddNoteActivity: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.add_note_layout)
-
         NoteModel
-        //val data = NoteModel.getData()
-        //if (data != null){
-        //    retrieveData()
-        //}
-        getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
+
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         addNote.setOnClickListener{saveNote()}
     }
-
-    //private fun retrieveData(){
-        //val noteListener = object : ValueEventListener{
-           // override fun onDataChange(snapshot: DataSnapshot) {
-               // val aNote = snapshot.getValue<Note>()
-               // if (aNote != null) {
-                   // add_note_title.setText(aNote.title)
-                   // add_note_body.setText(aNote.body)
-                   // add_note_datetime.setText(aNote.dateTime)
-                //}
-
-           // }
-
-            //override fun onCancelled(error: DatabaseError) {
-
-            //}
-        //}
-        //db.addValueEventListener(noteListener)
-
-    //}
 
 
     private fun saveNote(){
@@ -74,5 +51,22 @@ class AddNoteActivity: AppCompatActivity() {
             }
         })
     }
+
+    //val noteListener = object : ValueEventListener{                                   //trying to read the existing note and display
+        //override fun onDataChange(snapshot: DataSnapshot) {                           //to the add_note_layout
+            //val aNote = snapshot.getValue<Note>()
+            //if (aNote != null) {
+                //add_note_title.setText(snapshot.child("title").getValue().toString())
+                //add_note_body.setText(snapshot.child("body").getValue().toString())
+                //add_note_datetime.setText(snapshot.child("dateTime").getValue().toString())
+            //}
+
+        //}
+
+        //override fun onCancelled(error: DatabaseError) {
+
+        //}
+    //}
+    //db.addValueEventListener(noteListener)
 
 }

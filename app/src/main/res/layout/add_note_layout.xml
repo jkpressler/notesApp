@@ -3,50 +3,72 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#B8E0FF"
+    >
 
-    <EditText
-        android:id="@+id/add_note_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/_25ssp"
-        android:hint="Title"
-        android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_4sdp"
-        android:background="#66A869"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:text="@string/add_note"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="@dimen/_20ssp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <EditText
-        android:id="@+id/add_note_datetime"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/_18ssp"
-        android:background="#70AE73"
-        android:textColor="@color/white"
-        android:inputType="date|datetime"
-        android:hint="DateTime"
-        android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_4sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_note_title"/>
+        <EditText
+            android:id="@+id/add_note_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_25ssp"
+            android:paddingStart="@dimen/_10sdp"
+            android:hint="@string/title"
+            android:textColorHint="@color/white"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:paddingBottom="@dimen/_8sdp"
+            android:background="#66A869"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <EditText
-        android:id="@+id/add_note_body"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/_18ssp"
-        android:hint="Body"
-        android:layout_marginStart="@dimen/_4sdp"
-        android:layout_marginEnd="@dimen/_4sdp"
-        android:background="#77AE7A"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/add_note_datetime"/>
+        <EditText
+            android:id="@+id/add_note_datetime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:textSize="@dimen/_18ssp"
+            android:background="#70AE73"
+            android:textColor="@color/white"
+            android:inputType="date|datetime"
+            android:hint="@string/dateTime"
+            android:textColorHint="@color/white"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_note_title"/>
+
+        <EditText
+            android:id="@+id/add_note_body"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_10sdp"
+            android:textSize="@dimen/_18ssp"
+            android:hint="@string/body"
+            android:textColorHint="@color/white"
+            android:paddingBottom="@dimen/_50sdp"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:background="#77AE7A"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_note_datetime"/>
 
     <Button
         android:id="@+id/addNote"

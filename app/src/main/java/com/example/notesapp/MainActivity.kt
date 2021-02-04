@@ -3,6 +3,7 @@ package com.example.notesapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.ListView
 import android.widget.Toast
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -29,9 +30,8 @@ class MainActivity : AppCompatActivity(), Observer {
         dataList.adapter = mNoteListAdapter                                     //add note_items to the listview
 
         dataList.setOnItemClickListener { parent, view, position, id ->         //listen for a click on a note_item
-            if(position==0){
-                Toast.makeText(this, "First Note Clicked", Toast.LENGTH_LONG).show()
-            }
+                Toast.makeText(this, "New note page... need to fix", Toast.LENGTH_LONG).show()
+
 
             val element = parent.getItemAtPosition(position) // The item that was clicked
             val intent = Intent(this, AddNoteActivity::class.java)

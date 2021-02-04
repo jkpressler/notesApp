@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">notesApp</string>
+    <string name="title">Add a title</string>
+    <string name="body">Add body text</string>
+    <string name="dateTime">Add a date</string>
+    <string name="add_note">Enter A New Note</string>
 </resources>
