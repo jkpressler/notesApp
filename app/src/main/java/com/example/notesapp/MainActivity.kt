@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.ListView
+import android.widget.SearchView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -61,7 +62,6 @@ class MainActivity : AppCompatActivity(), Observer{
             addNote()                                                           //go to add a note page when "New Note" button is clicked
         }
     }
-
 
     private fun addNote(){
         val intent = Intent(this, AddNoteActivity::class.java)

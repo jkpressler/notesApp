@@ -4,19 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/main">
+
+    <SearchView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:searchIcon="@drawable/ic_search"
+        android:background="@drawable/ic_background"
+        android:queryHint="@string/search"
+        android:theme="@style/ThemeOverlay.AppCompat"
+        android:iconifiedByDefault="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/search_view"/>
 
     <ListView
         android:id="@+id/notesList"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#B8E0FF"
+        android:background="@color/main"
+        android:layout_marginTop="@dimen/_5sdp"
         android:divider="@color/white"
         android:dividerHeight="2dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/search_view"/>
 
     <Button
         android:id="@+id/makeNote"
