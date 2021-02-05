@@ -6,32 +6,51 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.ListView
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.notesapp.adapters.NoteAdapter
+import com.example.notesapp.adapters.RecyclerAdapter
 import com.example.notesapp.models.Note
 import com.example.notesapp.models.NoteModel
+import com.example.notesapp.models.NoteModel.getData
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.add_note_layout.*
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MainActivity : AppCompatActivity(), Observer {
+class MainActivity : AppCompatActivity(), Observer{
     private var mNoteListAdapter: NoteAdapter? = null
-
+    //private lateinit var rAdapter: RecyclerAdapter
+    //private lateinit var linearLayoutManager: LinearLayoutManager
+    //private val data: ArrayList<Note> = ArrayList()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_main)                  //set layout as activity_main
         NoteModel
 
+        Log.i("noteModel", "${getData()}")
 
-        val dataList: ListView = findViewById(R.id.notesList)
-        val data: ArrayList<Note> = ArrayList()                                 //arraylist of notes
+        //linearLayoutManager = LinearLayoutManager(this)
+        //rvNotesList.layoutManager = linearLayoutManager
+
+
+        val dataList: ListView = findViewById(R.id.notesList)  //arraylist of notes
+        val data: ArrayList<Note> = ArrayList()
         mNoteListAdapter = NoteAdapter(this, R.layout.note_item, data)  //pass in this context, note_item layout, and the arraylist of notes
         dataList.adapter = mNoteListAdapter                                     //add note_items to the listview
 
-        dataList.setOnItemClickListener { parent, view, position, id ->         //listen for a click on a note_item
-                Toast.makeText(this, "New note page... need to fix", Toast.LENGTH_LONG).show()
+        //rAdapter = RecyclerAdapter()
+        if (mNoteListAdapter!=null){
+            Log.i("rAdapter","It made it here and data is $data")
+        }
+        //rAdapter.setData(data)
+        //rvNotesList.adapter = rAdapter
 
+        dataList.setOnItemClickListener { parent, view, position, id ->         //listen for a click on a note_item
+                Toast.makeText(this, "New note page... need to fix", Toast.LENGTH_SHORT).show()
 
             val element = parent.getItemAtPosition(position) // The item that was clicked
             val intent = Intent(this, AddNoteActivity::class.java)
@@ -43,6 +62,7 @@ class MainActivity : AppCompatActivity(), Observer {
         }
     }
 
+
     private fun addNote(){
         val intent = Intent(this, AddNoteActivity::class.java)
         startActivity(intent)
@@ -52,11 +72,11 @@ class MainActivity : AppCompatActivity(), Observer {
         refresh()
     }
 
-    private fun refresh(){
+    private fun refresh() {
         mNoteListAdapter?.clear()
 
-        val data = NoteModel.getData()
-        if(data != null){
+        val data = getData()
+        if (data != null) {
             mNoteListAdapter?.clear()
             mNoteListAdapter?.addAll(data)
             mNoteListAdapter?.notifyDataSetChanged()

@@ -11,7 +11,7 @@ import kotlin.collections.ArrayList
 object NoteModel: Observable() {
 
     private var mValueDataListener: ValueEventListener? = null
-    private var mNoteList: ArrayList<Note>? = ArrayList()
+    private var mNoteList: ArrayList<Note> = ArrayList()
 
     private fun getDatabaseRef(): DatabaseReference? {
         return FirebaseDatabase.getInstance().reference.child("notes")
@@ -40,7 +40,7 @@ object NoteModel: Observable() {
                         mNoteList = data
                         Log.i(
                             "NotesModel",
-                            "data updated. there are " + mNoteList!!.size + " notes in the cache"
+                            "data updated. there are " + mNoteList!!.size + " notes in the cache and it is $mNoteList"
                         )
                         setChanged()
                         notifyObservers()
@@ -63,7 +63,7 @@ object NoteModel: Observable() {
 
     }
 
-    fun getData(): ArrayList<Note>?{
+    fun getData(): ArrayList<Note>{
         return mNoteList
     }
 
